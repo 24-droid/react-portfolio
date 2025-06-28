@@ -5,12 +5,42 @@ import projImg2 from "../assets/img/ecommerce-img.png";
 import projImg3 from "../assets/img/output_portfolioimg.png";
 import projImg4 from "../assets/img/output_maze.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import TrackMind from "../assets/img/TrackMind.jpg"
+import DailyTip from "../assets/img/DailyTip.jpg"
+import FinanceFlow from "../assets/img/FinanceFlow.jpg"
+import droid from "../assets/img/24-droid.jpg"
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import React from "react";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "TrackMind",
+      description: "Development",
+      imgUrl: TrackMind,
+      projectUrl: "#",
+    },
+    {
+      title: "FinanceFlow",
+      description: "Development",
+      imgUrl: FinanceFlow,
+      projectUrl: "https://financeflow24.vercel.app/",
+      
+    },
+    {
+      title: "DailyTips",
+      description: "Development",
+      imgUrl: DailyTip,
+      projectUrl:"https://dailytips.vercel.app"
+    },
+    {
+      title: "AI-Wrapper",
+      description: "Development",
+      imgUrl: droid,
+      projectUrl: "https://24-droid.vercel.app/",
+      
+    },
     {
       title: "Social media website",
       description: "Development",
@@ -22,12 +52,6 @@ const Projects = () => {
       description: "Development",
       imgUrl: projImg2,
       projectUrl: "https://24-droid.github.io/E-commerce-Website/",
-      
-    },
-    {
-      title: "My-Portfolio",
-      description: "Development",
-      imgUrl: projImg3,
     },
     {
       title: "Maze Generator",
@@ -36,17 +60,18 @@ const Projects = () => {
       projectUrl:"https://24-droid.github.io/dsa-mini-project/",
     },
     {
-      title: "Social media website",
+      title: "TrackMind",
       description: "Development",
-      imgUrl: projImg1,
-      projectUrl: "https://github.com/24-droid/social-media-website",
+      imgUrl: TrackMind,
+      projectUrl: "#",
     },
     {
-      title: "E-commerce Website",
+      title: "FinanceFlow",
       description: "Development",
-      imgUrl: projImg2,
-      projectUrl: "https://24-droid.github.io/E-commerce-Website/",
-    }
+      imgUrl: FinanceFlow,
+      projectUrl: "https://financeflow24.vercel.app/",
+      
+    },
   ];
   return (
     <section className="project" id="projects">
@@ -105,7 +130,14 @@ const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>Will be adding some cool projects very soon.</p>
+                      <Row>
+                          {projects.map((project, index) => {
+                            if (index >= 3) {
+                              return <ProjectCard key={index} {...project} />;
+                            }
+                            return null;
+                          })}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
