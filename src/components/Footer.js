@@ -24,7 +24,7 @@ const Footer = () => {
             <a href="https://x.com/24_droid_2005?t=a13ZdYvvlsBd53ks8VUNXw&s=08">
               <img src={navIcon3} alt="" className="social-icons" />
             </a>
-            <p>Copyright 2024. All Rights Reserved</p>
+            <p>Copyright {new Date().getFullYear()}. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>

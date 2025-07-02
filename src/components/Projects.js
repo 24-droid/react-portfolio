@@ -9,6 +9,7 @@ import TrackMind from "../assets/img/TrackMind.jpg"
 import DailyTip from "../assets/img/DailyTip.jpg"
 import FinanceFlow from "../assets/img/FinanceFlow.jpg"
 import droid from "../assets/img/24-droid.jpg"
+import Maze from "../assets/img/Maze.jpg"
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import React from "react";
@@ -19,7 +20,7 @@ const Projects = () => {
       title: "TrackMind",
       description: "Development",
       imgUrl: TrackMind,
-      projectUrl: "#",
+      projectUrl: "https://trackmind.vercel.app/",
     },
     {
       title: "FinanceFlow",
@@ -56,14 +57,14 @@ const Projects = () => {
     {
       title: "Maze Generator",
       description: "Development",
-      imgUrl: projImg4,
+      imgUrl: Maze,
       projectUrl:"https://24-droid.github.io/dsa-mini-project/",
     },
     {
       title: "TrackMind",
       description: "Development",
       imgUrl: TrackMind,
-      projectUrl: "#",
+      projectUrl: "https://trackmind.vercel.app/",
     },
     {
       title: "FinanceFlow",
@@ -122,7 +123,7 @@ const Projects = () => {
                       <Tab.Pane eventKey="second">
                         <Row>
                           {projects.map((project, index) => {
-                            if (index >= 3) {
+                            if (index >=3 && index< 6) {
                               return <ProjectCard key={index} {...project} />;
                             }
                             return null;
@@ -132,7 +133,7 @@ const Projects = () => {
                       <Tab.Pane eventKey="third">
                       <Row>
                           {projects.map((project, index) => {
-                            if (index >= 3) {
+                            if (index >=6 && index < 9) {
                               return <ProjectCard key={index} {...project} />;
                             }
                             return null;
