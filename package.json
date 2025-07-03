@@ -27,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +50,8 @@
     ]
   },
   "devDependencies": {
-    "@types/dotenv": "^8.2.3"
-  }
+    "@types/dotenv": "^8.2.3",
+    "gh-pages": "^6.3.0"
+  },
+  "homepage": "https://24-droid.github.io/react-portfolio"
 }
