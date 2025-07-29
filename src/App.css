@@ -310,15 +310,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 15px 0 50px 0;
   position: relative;
+
 }
 .skill-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
-  margin-top: -60px;
 }
 .skill h2 {
 	font-size: 45px;
@@ -641,4 +641,115 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .footer .social-icon{
   margin-top: 1rem;
+}
+
+/* === NEW & SIMPLIFIED EXPERIENCE SECTION CSS === */
+
+.experience {
+  padding: 80px 0;
+  position: relative;
+  background-color: #000;
+}
+
+.experience h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.experience p {
+  color: #b8b8b8;
+  font-size: 18px;
+  margin: 0 auto 50px auto; /* Reduced bottom margin */
+  text-align: center;
+  width: 80%;
+}
+
+/* This class on the Row helps with equal height cards */
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.experience-card {
+  padding: 25px 20px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  /* The h-100 class in React will make this apply */
+  height: 100%; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px); /* Add a nice hover effect */
+}
+
+/* Card content styling */
+.experience-content h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.experience-content h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b8b8b8;
+  margin-bottom: 10px;
+}
+.experience-date {
+  font-style: italic;
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+.experience-content ul {
+  list-style-type: none;
+  padding-left: 0; /* <<< THIS IS THE KEY FIX */
+  margin-left: 0;
+}
+
+/* This creates the space for our custom checkmark */
+.experience-content ul li {
+  position: relative;
+  padding-left: 25px; /* Spacing for the checkmark */
+  padding-bottom: 12px; /* A bit more space between lines */
+}
+
+.experience-content ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #aa367c;
+}
+
+/* Add these new rules to your CSS file */
+
+.experience-content {
+  display: flex;
+  align-items: flex-start; /* Aligns image and text to the top */
+ /* <<< ADD THIS: Ensures content starts from the left */
+  gap: 20px;
+}
+
+.experience-image {
+  flex-shrink: 0;
+  width: 60px;
+}
+
+.experience-image img {
+  width: 100%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+}
+
+/* This container holds all the text */
+.experience-details {
+  flex-grow: 1;
+  padding: 0; /* <<< ADD THIS: Resets any unwanted padding */
+  margin: 0;  /* <<< ADD THIS: Resets any unwanted margin */
 }
