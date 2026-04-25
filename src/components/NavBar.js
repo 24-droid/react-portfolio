@@ -63,19 +63,30 @@ const NavBar = () => {
               >
                 Projects
               </Nav.Link>
+              <Nav.Link
+                href="#achievements"
+                className={
+                  activeLink === "achievements"
+                    ? "active-navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("achievements")}
+              >
+                Achievements
+              </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
                 <a href="https://www.linkedin.com/in/om-singh-it/">
-                  <img src={navIcon1} alt="" />
+                  <img src={navIcon1} alt="LinkedIn" />
+                </a>
+                <a href="https://github.com/24-droid">
+                  <img src={navIcon2} alt="GitHub" />
+                </a>
+                <a href="https://x.com/24_droid_2005?t=a13ZdYvvlsBd53ks8VUNXw&s=08">
+                  <img src={navIcon3} alt="X" />
                 </a>
               </div>
-              <a href="https://github.com/24-droid">
-                <img src={navIcon2} alt="" className="social-icons" />
-              </a>
-              <a href="https://x.com/24_droid_2005?t=a13ZdYvvlsBd53ks8VUNXw&s=08">
-                <img src={navIcon3} alt="" className="social-icons" />
-              </a>
 
               <HashLink to="#connect">
                 <button className="vvd">

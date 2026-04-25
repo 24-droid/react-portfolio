@@ -8,6 +8,8 @@ import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Achievements from "./components/Achievements";
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,7 @@ function App() {
       <Experience />
       <Skills />
       <Projects />
+      <Achievements />
       <Contacts />
       <Footer />
     </div>

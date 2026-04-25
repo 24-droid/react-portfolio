@@ -1,21 +1,7 @@
 import { Col } from "react-bootstrap";
 import React from "react";
 
-// const ProjectCard = ({ title, description, imgUrl,projectUrl }) => {
-//   return (
-//     <Col size={12} sm={6} md={4}>
-//       <div className="proj-imgbx">
-//       <a href={projectUrl} target="_blank" rel="noopener noreferrer">Project_Link</a>
-//         <img src={imgUrl} alt={`${title} thumbnail`} />
-//         <div className="proj-txtx">
-//           <h4>{title}</h4>
-//           <span>{description}</span>
-//         </div>
-//       </div>
-//     </Col>
-//   );
-// };
-const ProjectCard = ({ title, description, imgUrl, projectUrl }) => {
+const ProjectCard = ({ title, description, imgUrl, projectUrl, tags = [] }) => {
   return (
     <Col size={12} sm={6} md={4}>
       {projectUrl ? (
@@ -25,6 +11,14 @@ const ProjectCard = ({ title, description, imgUrl, projectUrl }) => {
             <div className="proj-txtx">
               <h4>{title}</h4>
               <span>{description}</span>
+              {tags.length > 0 && (
+                <div className="proj-tags">
+                  {tags.map((tag, i) => (
+                    <span key={i} className="proj-tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+              <div className="proj-cta">↗ View Project</div>
             </div>
           </div>
         </a>
@@ -34,6 +28,13 @@ const ProjectCard = ({ title, description, imgUrl, projectUrl }) => {
           <div className="proj-txtx">
             <h4>{title}</h4>
             <span>{description}</span>
+            {tags.length > 0 && (
+              <div className="proj-tags">
+                {tags.map((tag, i) => (
+                  <span key={i} className="proj-tag">{tag}</span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -41,7 +42,4 @@ const ProjectCard = ({ title, description, imgUrl, projectUrl }) => {
   );
 };
 
-
-
 export default ProjectCard;
-
